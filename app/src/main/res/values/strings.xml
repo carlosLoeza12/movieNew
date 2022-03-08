@@ -1,5 +1,21 @@
 <resources>
     <string name="app_name">movieNew</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Movie -->
+    <string name="movie_title">Movie Title</string>
+    <string name="movie_reviews">Movie Reviews</string>
+    <string name="movie_review">Reviews</string>
+    <string name="movie_language">Language</string>
+    <string name="movie_released">Movie Released</string>
+    <string name="movie_release">Released</string>
+    <string name="movie_overView">Overview</string>
+    <string name="movie_bookmark">Bookmark</string>
+    <string name="movie_favorite">Favorite</string>
+    <string name="movie_share">Share</string>
+    <string name="movie_popular">Popular Movies</string>
+    <string name="movie_upcoming">Upcoming Movies</string>
+    <string name="movie_top_rated">Top Rated Movies</string>
+
+
 </resources>

@@ -7,16 +7,51 @@
 
     <fragment
         android:id="@+id/movieFragment"
-        android:name="com.example.movienew.MovieFragment"
+        android:name="com.example.movienew.ui.movie.MovieFragment"
         android:label="fragment_movie"
         tools:layout="@layout/fragment_movie" >
         <action
             android:id="@+id/action_movieFragment_to_movieDetailFragment"
-            app:destination="@id/movieDetailFragment" />
+            app:destination="@id/movieDetailFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_rigth" />
     </fragment>
     <fragment
         android:id="@+id/movieDetailFragment"
-        android:name="com.example.movienew.MovieDetailFragment"
+        android:name="com.example.movienew.ui.moviedetail.MovieDetailFragment"
         android:label="fragment_movie_detail"
-        tools:layout="@layout/fragment_movie_detail" />
+        tools:layout="@layout/fragment_movie_detail" >
+        <argument
+            android:name="posterImageUrl"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="backgroundImageUrl"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="voteAverage"
+            app:argType="float" />
+        <argument
+            android:name="voteCount"
+            app:argType="integer" />
+        <argument
+            android:name="overView"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="title"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="language"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="releaseDate"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
 </navigation>
