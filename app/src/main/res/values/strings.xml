@@ -3,6 +3,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- Movie -->
+    <string name="movie">Movie App</string>
     <string name="movie_title">Movie Title</string>
     <string name="movie_reviews">Movie Reviews</string>
     <string name="movie_review">Reviews</string>
@@ -16,6 +17,14 @@
     <string name="movie_popular">Popular Movies</string>
     <string name="movie_upcoming">Upcoming Movies</string>
     <string name="movie_top_rated">Top Rated Movies</string>
+    <string name="movie_deatil">Details</string>
+
+    <!-- App -->
+    <string name="app_configuration">Configuration</string>
+    <string name="app_exit">Exit</string>
+    <string name="app_exit_app">want to exit the application?</string>
+    <string name="app_ok">Ok</string>
+
 
 
 </resources>
