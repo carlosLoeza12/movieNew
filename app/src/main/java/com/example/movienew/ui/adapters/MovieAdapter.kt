@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.movienew.aplication.AppConstants
+import com.example.movienew.application.AppConstants
 import com.example.movienew.core.BaseViewHolder
 import com.example.movienew.data.model.Movie
 import com.example.movienew.databinding.MovieItemBinding

@@ -2,8 +2,9 @@ package com.example.movienew.repository
 
 import com.example.movienew.data.model.MovieList
 import com.example.movienew.data.remote.MovieDataSource
+import javax.inject.Inject
 
-class MovieRepositoryImp(private val dataSource: MovieDataSource): MovieRepository {
+class MovieRepositoryImp @Inject constructor(private val dataSource: MovieDataSource): MovieRepository {
 
     override suspend fun getUpcomingMovies(): MovieList {
          return dataSource.getUpcomingMovies()
