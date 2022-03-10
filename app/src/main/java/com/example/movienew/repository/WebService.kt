@@ -1,6 +1,6 @@
 package com.example.movienew.repository
 
-import com.example.movienew.aplication.AppConstants
+import com.example.movienew.application.AppConstants
 import com.example.movienew.data.model.MovieList
 import com.google.gson.GsonBuilder
 import retrofit2.Retrofit

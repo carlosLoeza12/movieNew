@@ -7,9 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.navArgs
 import coil.load
 import com.example.movienew.R
-import com.example.movienew.aplication.AppConstants
+import com.example.movienew.application.AppConstants
 import com.example.movienew.databinding.FragmentMovieDetailBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MovieDetailFragment : Fragment(R.layout.fragment_movie_detail) {
 
     private lateinit var binding: FragmentMovieDetailBinding

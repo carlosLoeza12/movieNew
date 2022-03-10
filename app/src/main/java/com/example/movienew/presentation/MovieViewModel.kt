@@ -5,9 +5,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.liveData
 import com.example.movienew.core.Resource
 import com.example.movienew.repository.MovieRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
+import javax.inject.Inject
 
-class MovieViewModel(private val repository: MovieRepository): ViewModel(){
+@HiltViewModel
+class MovieViewModel @Inject constructor(private val repository: MovieRepository): ViewModel(){
 
     fun fetchMainScreenMovies() = liveData(Dispatchers.IO) {
         emit(Resource.Loading())
@@ -28,9 +31,9 @@ class MovieViewModel(private val repository: MovieRepository): ViewModel(){
     }
 }
 
-class MovieViewModelFactory(private val repo: MovieRepository) : ViewModelProvider.Factory {
-    override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return modelClass.getConstructor(MovieRepository::class.java).newInstance(repo)
-    }
+//class MovieViewModelFactory(private val repo: MovieRepository) : ViewModelProvider.Factory {
+    //override fun <T : ViewModel> create(modelClass: Class<T>): T {
+    //    return modelClass.getConstructor(MovieRepository::class.java).newInstance(repo)
+  //  }
 
-}
+//}

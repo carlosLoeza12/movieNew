@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -16,21 +17,23 @@ import com.example.movienew.data.model.Movie
 import com.example.movienew.data.remote.MovieDataSource
 import com.example.movienew.databinding.FragmentMovieBinding
 import com.example.movienew.presentation.MovieViewModel
-import com.example.movienew.presentation.MovieViewModelFactory
 import com.example.movienew.repository.MovieRepositoryImp
 import com.example.movienew.repository.RetrofitClient
 import com.example.movienew.ui.adapters.MovieAdapter
 import com.example.movienew.ui.adapters.concat.PopularConcatAdapter
 import com.example.movienew.ui.adapters.concat.TopRatedConcatAdapter
 import com.example.movienew.ui.adapters.concat.UpcomingConcatAdapter
-
+import dagger.hilt.android.AndroidEntryPoint
+@AndroidEntryPoint
 class MovieFragment : Fragment(R.layout.fragment_movie), MovieAdapter.OnMovieClickListener {
 
     private lateinit var binding: FragmentMovieBinding
     private lateinit var concatAdapter: ConcatAdapter
-    private val viewModel by viewModels<MovieViewModel> {
+    private val viewModel by activityViewModels<MovieViewModel>()
+    /*private val viewModel by viewModels<MovieViewModel> {
         MovieViewModelFactory(MovieRepositoryImp(MovieDataSource(RetrofitClient.WebService)))
-    }
+    }*/
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMovieBinding.bind(view)
